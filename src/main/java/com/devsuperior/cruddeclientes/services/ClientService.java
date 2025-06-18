@@ -55,7 +55,7 @@ public class ClientService {
     @Transactional
     public void  delete(Long id) {
         if (!repository.existsById(id)) {
-            throw new ResourceNotFoundException("Recurso não encontrado");
+            throw new ResourceNotFoundException("Cliente não encontrado");
         }
         try {
             repository.deleteById(id);
